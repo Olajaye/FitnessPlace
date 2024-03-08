@@ -35,7 +35,7 @@ const Home = ({ setSelectedPage }: Props) => {
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, staggerChildren: 2 }}
             variants={{
               hidden: { opacity: 0, x:-50 },
               visible:{opacity:1, x:0}
@@ -46,10 +46,8 @@ const Home = ({ setSelectedPage }: Props) => {
                 <img src={HomePageText} alt="homepage-page-text" />
               </div>
             </div>
-            <p className='mt-8 text-sm'>
-               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
-              Studios to get the Body Shapes That you Dream of.. Get Your Dream
-              Body Now.
+            <p className='mt-8 text-md'>
+               Welcome to <span className='text-primary-500'>EVOGYM</span> Get ready to ignite your fitness journey and unleash your potential like never before! Our dedicated team is here to support and motivate your every step of the way. Whether you're a seasoned athlete or just starting out, we're committed to helping you crush your goals and become the best version of yourself. Let's sweat, grind, and achieve greatness together! 💪 
             </p>
           </motion.div>
           {/* Actions */}
@@ -57,7 +55,7 @@ const Home = ({ setSelectedPage }: Props) => {
             className='mt-8 flex items-center gap-8'
             initial='hidden'
             whileInView='visible'
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ amount: 0.5 }}
             transition={{delay:0.2, duration: 0.5 }}
             variants={{
               hidden: {opacity: 0, x:-50 },
@@ -78,10 +76,19 @@ const Home = ({ setSelectedPage }: Props) => {
           
         </motion.div>
         {/* image */}
-        <div
-          className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-end '>
+        <motion.div
+          className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-end'
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ amount: 0.5 }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              hidden: {opacity: 0, scale: 0 },
+              visible: { opacity: 1, scale: 1  }
+            }}
+        >
           <img src={HomePageGraphic} alt="home-pageGraphic" />
-        </div>
+        </motion.div>
       </div>
       {/* Sponsores */}
       {isAboveMediumScreens && (

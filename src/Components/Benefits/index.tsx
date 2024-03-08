@@ -15,19 +15,19 @@ const benefits: Array<BenefitType> = [
     icon: <HomeModernIcon className="h-6 w-6" />,
     title: "State of the Art Facilities",
     description:
-      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+      "The gym facilities are top-notch and well-equipped!, Cardio machines! Weight room! Sauna! and good Locker rooms!",
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "100's of Diverse Classes",
     description:
-      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+      "EVOGYM Gym offer diverse and effective workouts tailored to all fitness levels, keeping everyone motivated and engaged!",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
     title: "Expert and Pro Trainers",
     description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+      "The gym instructor is incredibly knowledgeable, motivating, and dedicated to helping clients achieve their fitness goals with personalized guidance and encouragement.",
   },
 ];
 
@@ -102,7 +102,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           <div>
             {/* TITLE */}
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] before:content-abstractwaves">
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -150,7 +150,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
 
             {/* BUTTON */}
             <div className="relative mt-16">
-              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[1] before:content-sparkles">
+              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
                 <ActionButton setSelectedPage={setSelectedPage}>
                   Join Now
                 </ActionButton>
